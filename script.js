@@ -5,7 +5,7 @@ var input = document.getElementById('guess').value;
 var Random;
 
 function findHotOrCold() {
-	var dif = Random - Number(input);
+	var dif = Math.abs(Random - Number(input));
 	if(dif <= 5)
 {
 	document.getElementById('respond').innerHTML = "HOT"; 
@@ -16,7 +16,7 @@ else{
 }
 
 function generate_random_number() {
-    Random = Math.floor((Math.random() * 40 - 20)); 
+    Random = (Math.random() * 40 - 20); 
    num.innerHTML = Random;
 	findHotOrCold();
 }
