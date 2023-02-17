@@ -6,17 +6,18 @@ var Random;
 
 function findHotOrCold() {
 	var dif = Math.abs(Random - Number(input));
-	if(dif <= 5)
-{
-	document.getElementById('respond').innerHTML = "HOT"; 
-}
-else{
-	document.getElementById('respond').innerHTML = "cold";
-}
+   if(dif <= 5)
+   {
+	 document.getElementById('respond').innerHTML = "Hot"; 
+    }
+   else
+	{
+	 document.getElementById('respond').innerHTML = "Cold";
+    }
 }
 
 function generate_random_number() {
-    Random = (Math.random() * 40 - 20); 
-   num.innerHTML = Random;
+    Random = (Math.random() * 41 - 20); 
+    num.innerText = Random;
 	findHotOrCold();
 }
